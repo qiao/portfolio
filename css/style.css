@@ -1,0 +1,172 @@
+html {
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #1e1e1e;
+  color: #ccc;
+  font-size: 14px;
+  line-height: 21px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  overflow: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  color: #ccc;
+  text-decoration: none;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+a:hover {
+  color: #eee;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+#project-link:hover {
+  color: #ff5d40;
+}
+
+#github-link:hover {
+  color: #39e444;
+  /*color: #fff340;*/
+}
+
+#contact-link:hover {
+  color: #4282d3;
+}
+
+#wrapper {
+  width: 800px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+#sidebar {
+  float: left;
+  width: 200px;
+  margin-top: 80px;
+  position: fixed;
+  text-align: right;
+}
+
+#name {
+  font-family: 'LeagueGothicRegular', "Impact", Charcoal, Arial Black, Gadget, Sans serif;
+  text-transform: uppercase;
+  font-size: 24px;
+  color: #ddd;
+}
+
+#nav {
+  margin-top: 30px;
+}
+
+#nav li {
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.content {
+  width: 520px;
+  float: right;
+  padding-top: 20px;
+}
+
+#projects li {
+  margin-bottom: 50px;
+}
+
+#projects h2 {
+  font-size: 24px;
+  color: #ddd;
+  font-weight: normal;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+#projects h2:hover {
+  color: #eee;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+#projects p {
+  /*margin: 5px 0;*/
+}
+
+.screenshot img {
+  max-width: 460px;    
+  padding: 10px;
+  background: #333;
+}
+
+#projects a {
+  color: #eee;
+  text-decoration: underline;
+  font-style: italic;
+}
+
+#contact {
+  margin-top: 80px;
+}
+
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444;
+}
+
+#contact i {
+  position: relative;
+  top: 2px;
+}
+
+#contact a {
+  color: inherit !important;
+  -webkit-transition: color 0;
+  -moz-transition: color 0;
+  -o-transition: color 0;
+  transition: color 0;
+}
+
+#contact li {
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+#contact li:hover {
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  -o-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.mail:hover {
+  color: #ff5d40;
+}
+
+.twitter:hover {
+  color: #4282d3;
+}
