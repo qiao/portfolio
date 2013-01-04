@@ -10,12 +10,18 @@ body {
   font-size: 14px;
   line-height: 21px;
   font-family: Arial, Helvetica, sans-serif;
-  overflow: auto;
+  overflow-y: scroll;
+}
+
+h2 {
+  margin: 0;
+  padding: 20px 0;
 }
 
 ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 a {
@@ -27,6 +33,7 @@ a {
   transition: color 0.5s;
 }
 
+
 a:hover {
   color: #eee;
   -webkit-transition: color 0.5s;
@@ -35,18 +42,30 @@ a:hover {
   transition: color 0.5s;
 }
 
-#project-link:hover {
-  color: #ff5d40;
+#external {
+  margin-top: 20px;
 }
 
-#github-link:hover {
-  color: #39e444;
-  /*color: #fff340;*/
+#project-link:hover {
+  color: #e439a1;
+}
+
+#about-link:hover {
+  color: #ff4040;
 }
 
 #contact-link:hover {
+  color: #fff740;
+}
+
+#stackoverflow-link:hover {
+  color: #ff9a40;
+}
+
+#github-link:hover {
   color: #4282d3;
 }
+
 
 #wrapper {
   width: 800px;
@@ -77,9 +96,12 @@ a:hover {
   font-size: 12px;
 }
 
-.content {
+#content {
   width: 520px;
   float: right;
+}
+
+#projects {
   padding-top: 20px;
 }
 
@@ -121,23 +143,18 @@ a:hover {
   font-style: italic;
 }
 
+#about {
+  padding-top: 115px;
+}
+
 #contact {
-  margin-top: 94px;
-}
-
-
-::-webkit-scrollbar {
-  width: 6px;
-  background: #000;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #444;
+  padding-top: 128px;
 }
 
 #contact i {
   position: relative;
-  top: 2px;
+  top: 3px;
+  padding-right: 5px;
 }
 
 #contact a {
@@ -169,3 +186,14 @@ a:hover {
 .twitter:hover {
   color: #4282d3;
 }
+
+
+::-webkit-scrollbar {
+  width: 6px;
+  background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #444;
+}
+
