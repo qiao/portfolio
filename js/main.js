@@ -1,6 +1,5 @@
 ;(function () {
 
-  var $body = $('body');
   var $content = $('#content');
   var cache = {};
 
@@ -60,12 +59,10 @@
     $a.click(function () {
       var hash = $a.attr('href');
       if (hash === window.location.hash) {
-        if ($body.scrollTop() !== 0) {
-          $body.animate({
+          $('html, body').animate({
             scrollTop: '0px'
           });
-        }
-        return false;
+          return false;
       } else {
         updateLocation(hash);
       }
