@@ -1,3 +1,5 @@
+/*global History: true*/
+
 ;(function () {
 
   var $content = $('#content');
@@ -28,7 +30,8 @@
     }
   };
 
-  function updateLocation(hash) {
+  function updateLocation() {
+    var hash = window.location.hash;
     if (hash.charAt(0) === '#') {
       hash = hash.slice(1);
     }
@@ -36,29 +39,24 @@
       window.location.hash = '#projects';
       hash = 'projects';
     }
-
-    $.each(routes, function (key, handler) {
-      if (hash === key) {
-        handler();
-      }
-    });
+    routes[hash]();
   }
+
+  $(window).bind('hashchange', updateLocation);
 
   $('#internal a').each(function () {
     var $a = $(this);
     $a.click(function () {
       var hash = $a.attr('href');
       if (hash === window.location.hash) {
-          $('html, body').animate({
-            scrollTop: '0px'
-          });
-          return false;
-      } else {
-        updateLocation(hash);
+        $('html, body').animate({
+          scrollTop: '0px'
+        });
+        return false;
       }
     });
   });
 
-  updateLocation(window.location.hash);
+  updateLocation();
 
 })();
