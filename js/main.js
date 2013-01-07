@@ -1,36 +1,26 @@
 ;(function () {
 
   var $content = $('#content');
-  var cache = {};
 
-  function loadFragment(url, callback) {
+  function loadFragment(selector, callback) {
     $content.fadeOut(function () {
-      if (cache[url]) {
-        $content.html(cache[url]).fadeIn();
-        if (callback) {
-          callback();
-        }
-      } else {
-        $.get(url, function (fragment) {
-          cache[url] = fragment;
-          $content.html(fragment).fadeIn();
-          if (callback) {
-            callback();
-          }
-        });
+      var fragment = $(selector).html();
+      $content.html(fragment).fadeIn();
+      if (callback) {
+        callback();
       }
     });
   }
 
   var routes = {
     'projects' : function () {
-      loadFragment('projects.html');
+      loadFragment('#projects-content');
     },
     'about': function () {
-      loadFragment('about.html');
+      loadFragment('#about-content');
     },
     'contact': function () {
-      loadFragment('contact.html', function () {
+      loadFragment('#contact-content', function () {
         $('#mail-address').html(
           '<a href="mailto:xueqiaoxu@gmail.com">xueqiaoxu@gmail.com</a>'
         );
