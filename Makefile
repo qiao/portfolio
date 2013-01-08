@@ -9,6 +9,7 @@ css:
 js:
 	cat js/jquery.min.js \
 		js/main.js \
+		js/ga.js \
 		> build/application.js
 	uglifyjs -nc -o build/application.js build/application.js
 
