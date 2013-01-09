@@ -168,40 +168,24 @@ a:hover {
 }
 
 #contact a {
-  color: inherit !important;
-  -webkit-transition: color 0;
-  -moz-transition: color 0;
-  -o-transition: color 0;
-  transition: color 0;
-}
-
-#contact li {
   -webkit-transition: color 0.5s;
   -moz-transition: color 0.5s;
   -o-transition: color 0.5s;
   transition: color 0.5s;
 }
 
-#contact li:hover {
+#contact a:hover {
   -webkit-transition: color 0.5s;
   -moz-transition: color 0.5s;
   -o-transition: color 0.5s;
   transition: color 0.5s;
 }
 
-.mail:hover {
-  color: #ff5d40;
-}
-
-.mail a:hover {
+#mail:hover {
   color: #ff5d40 !important;
 }
 
-.twitter:hover {
-  color: #4282d3;
-}
-
-.twitter a:hover {
+#twitter:hover {
   color: #4282d3 !important;
 }
 
