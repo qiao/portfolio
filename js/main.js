@@ -30,8 +30,8 @@
     }
   };
 
-  function updateLocation() {
-    var hash = window.location.hash;
+  function updateLocation(hash) {
+    hash = hash || window.location.hash;
     if (hash.charAt(0) === '#') {
       hash = hash.slice(1);
     }
@@ -42,8 +42,6 @@
     routes[hash]();
   }
 
-  $(window).bind('hashchange', updateLocation);
-
   $('#internal a').each(function () {
     var $a = $(this);
     $a.click(function () {
@@ -53,6 +51,8 @@
           scrollTop: '0px'
         });
         return false;
+      } else {
+        updateLocation(hash);
       }
     });
   });
