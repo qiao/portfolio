@@ -1,5 +1,3 @@
-/*global History: true*/
-
 ;(function () {
 
   var $content = $('#content');
@@ -41,20 +39,40 @@
     routes[hash]();
   }
 
-  $('#internal a').each(function () {
-    var $a = $(this);
-    $a.click(function () {
-      var hash = $a.attr('href');
-      if (hash === window.location.hash) {
-        $('html, body').animate({
-          scrollTop: '0px'
-        });
-        return false;
-      } else {
-        updateLocation(hash);
-      }
+  if ('onhashchange' in window) {
+    $('#internal a').each(function () {
+      var $a = $(this);
+      $a.click(function () {
+        var hash = $a.attr('href');
+        if (hash === window.location.hash) {
+          $('html, body').animate({
+            scrollTop: '0px'
+          });
+          return false;
+        }
+      });
     });
-  });
+
+    $(window).on('hashchange', function () {
+      updateLocation();
+    });
+
+  } else {
+    $('#internal a').each(function () {
+      var $a = $(this);
+      $a.click(function () {
+        var hash = $a.attr('href');
+        if (hash === window.location.hash) {
+          $('html, body').animate({
+            scrollTop: '0px'
+          });
+          return false;
+        } else {
+          updateLocation(hash);
+        }
+      });
+    });
+  }
 
   updateLocation();
 
