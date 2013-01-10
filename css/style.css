@@ -25,6 +25,7 @@ ul {
 }
 
 a {
+  display: inline-block;
   color: #ccc;
   text-decoration: none;
   -webkit-transition: color 0.5s;
