@@ -127,12 +127,7 @@ a:hover {
   transition: color 0.5s;
 }
 
-#projects p {
-  /*margin: 5px 0;*/
-}
-
 .screenshot img {
-  max-width: 460px;    
   padding: 10px;
   background: #333;
 }
