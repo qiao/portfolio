@@ -74,6 +74,7 @@ a:hover {
   overflow: hidden;
 }
 
+
 #sidebar {
   float: left;
   width: 200px;
@@ -100,6 +101,7 @@ a:hover {
 #content {
   width: 500px;
   float: right;
+  position: relative;
 }
 
 #projects {
@@ -128,9 +130,15 @@ a:hover {
   transition: color 0.5s;
 }
 
+.screenshot {
+  position: relative;
+  width: 100%;
+}
+
 .screenshot img {
-  padding: 10px;
-  background: #333;
+  border: 10px solid #333;
+  display: block;
+  max-width: 460px;
 }
 
 #projects a {
@@ -195,3 +203,39 @@ a:hover {
   background: #444;
 }
 
+@media (max-width: 800px) {
+  #wrapper {
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+  }
+
+  #content {
+    margin: 0 auto;
+    float: none;
+    width: auto;
+    width: 90%;
+    position: relative;
+  }
+
+  #sidebar {
+    position: relative;
+    float: none;
+    text-align: center;
+    width: 90%;
+    margin-top: 40px;
+  }
+
+  .screenshot {
+    width: 100%;
+    position: relative;
+  }
+
+  .screenshot img {
+    width: 96%;
+    max-width: 96%;
+    border: none;
+    padding: 2%;
+    background-color: #333;
+  }
+}
