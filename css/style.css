@@ -48,25 +48,28 @@ a:hover {
 }
 
 #project-link:hover {
-  color: #e439a1;
-}
-
-#about-link:hover {
   color: #ff4040;
 }
 
+#about-link:hover {
+  color: #ff9540;
+}
+
 #contact-link:hover {
-  color: #fff740;
+  color: #ffdf40;
 }
 
 #stackoverflow-link:hover {
-  color: #ff9a40;
+  color: #83f03c;
 }
 
 #github-link:hover {
-  color: #4282d3;
+  color: #38b2ce;
 }
 
+#amazon-link:hover {
+  color: #554dd8;
+}
 
 #wrapper {
   width: 780px;
